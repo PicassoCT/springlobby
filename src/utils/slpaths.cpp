@@ -104,7 +104,8 @@ void SlPaths::PossibleEnginePaths(LSL::StringVector& pl)
 {
 	pl.push_back(STD_STRING(wxFileName::GetCwd())); //current working directory
 	pl.push_back(GetExecutableFolder()); //dir of springlobby.exe
-
+        pl.push_back("/usr/share/games/spring/"); //TODO: Springlobby shouldnt throw away previously added user info.
+        
 	std::vector<std::string> basedirs;
 	basedirs.push_back(GetDownloadDir());
 	EngineSubPaths(basedirs, pl);
